@@ -98,7 +98,7 @@ section.blk{padding-block:80px}
 .card h3{font-family:var(--f-body);font-size:15px;font-weight:600}
 .card .pr{font-size:15px;font-variant-numeric:tabular-nums}
 .card .pr s{color:var(--suave);margin-left:6px}
-.card .mean{margin:6px 0 0;min-height:5.6em;font-size:14px;line-height:1.5;color:#45484d}
+.card .mean{margin:6px 0 0;font-size:14px;line-height:1.5;color:#45484d}
 .traits{display:grid;gap:6px;padding-bottom:12px;border-bottom:1px solid var(--linea);margin-bottom:2px}
 .traits>span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
 .traits ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
@@ -516,7 +516,7 @@ const best = PACKS.reduce((a,p)=>p.price/p.n<a.price/a.n?p:a);
 COLORS.forEach(c=>{
   const a=document.createElement("a"); a.className="card"; a.href="#packs";
   a.innerHTML=`<div class="ph"><img src="${c.img}" alt="${c.alt}" loading="lazy"><span class="badge">100% algodón</span></div>
-    <p class="mean"><b>${c.k} · ${c.m}</b> ${c.d}</p>
+    <p class="mean"><b>${c.k} · ${c.m}</b></p>
     <div class="traits"><span>El hombre que lo usa</span><ul>${c.r.map(t=>`<li>${t}</li>`).join("")}</ul></div>
     <h3>Polo Cuello Redondo · ${c.k}</h3>
     <div class="pr">${money(UNIT)} <span class="small" style="display:inline">· desde ${money(best.price/best.n)} en pack</span></div>
